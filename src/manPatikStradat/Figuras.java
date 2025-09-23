@@ -4,7 +4,7 @@ public class Figuras {
 
 	public int x, y;
 	
-	public void Centrs (int x, int y) {
+	public Figuras (int x, int y) {
 		this.x=x;
 		this.y=y;
 	}
