@@ -38,7 +38,7 @@ public class Centrs {
 				aplis1.RinkaLinija());
 	*/	
 	
-		int izvele,poga;
+		int izvele;
 	
 		do {
 			izvele=minkuTante.skaitlaParbaude("Ko vēlaties darīt?\n"
