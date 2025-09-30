@@ -4,11 +4,11 @@
 
 ### Darāmo darbu saraksts:
 - [X] Izveidot klasi Centrs
-- [ ] Izveidot klasi Figuras
-- [ ] Izveidot klasi GoatIzveide
+- [X] Izveidot klasi Figuras
+- [X] Izveidot klasi GoatIzveide
 - [X] Izveidot klasi Cetrustruris
 - [X] Izveidot klasi Trijsturis
 - [X] Izveidot klasi Apliss
 - [ ] Nodrošināt metožu izsaukšanu
-- [ ] Nodrošināt jaunu objektu izvedi un saglabāšanu
-- [ ] Nodrošīnāt esošo objektu aplūkošanu
+- [X] Nodrošināt jaunu objektu izvedi un saglabāšanu
+- [X] Nodrošīnāt esošo objektu aplūkošanu
