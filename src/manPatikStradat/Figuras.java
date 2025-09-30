@@ -13,6 +13,7 @@ public class Figuras {
 		return "Centra punkts atordas:\n x="+x+"\ny="+y;
 	}
 	
+	
 	public void parvietot (int koordX, int koordY) {
 		x+=koordX;
 		y+=koordY;

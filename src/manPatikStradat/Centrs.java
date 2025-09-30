@@ -14,31 +14,8 @@ public class Centrs {
 	static ArrayList<Trijsturis> trisObjekti=new ArrayList<>();
 	
 	public static void main(String[] args) {
-	/*	
-		Figuras centraP1 = new Figuras(-10,12);
-		System.out.println(centraP1.izvaditKoordinates());
-		centraP1.parvietot(5, -2);
-		System.out.println(centraP1.izvaditKoordinates());
-		
-		
-		Cetrustruris cetrsturis1 = new Cetrustruris();
-		System.out.println(cetrsturis1.izvaditCetrInfo());
-		
-		System.out.println(cetrsturis1.punkts.izvaditKoordinates());
-		
-		Cetrustruris cetrsturis2 = new Cetrustruris(centraP1, 5 ,11);
-		System.out.println(cetrsturis2.izvaditCetrInfo()+"\n"+
-				cetrsturis2.punkts.izvaditKoordinates()+"\n"+
-				cetrsturis2.CetrLaukums());
-		
-		Figuras punkts2 = new Figuras(5,23);
-		Aplisss aplis1= new Aplisss(punkts2, 5);
-		System.out.println(aplis1.IzvaditAplaInfo()+"\n"+
-		aplis1.RinkaLaukums()+"\n"+
-				aplis1.RinkaLinija());
-	*/	
 	
-		int izvele;
+		int izvele,poga;
 	
 		do {
 			izvele=minkuTante.skaitlaParbaude("Ko vēlaties darīt?\n"
@@ -59,6 +36,51 @@ public class Centrs {
 			case 1:
 				GoatIzveide.izveidotObjektu();
 				break;
+				
+			case 2:
+				poga=JOptionPane.showOptionDialog(null, "Kuras figuras aplūkot?", "Izvēle", JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.QUESTION_MESSAGE, null, objektuPogas, objektuPogas[0]);
+				
+				
+				switch(poga) {
+				case 0:
+					if(centraObjekti.size()<1) {
+						JOptionPane.showMessageDialog(null, "Nav centra punktu!","Brīdinājums!",JOptionPane.WARNING_MESSAGE);
+					break;
+					}
+					JOptionPane.showMessageDialog(null, IzveidotieObjekti.izvadit(centraObjekti),"Centra punkti",JOptionPane.PLAIN_MESSAGE);
+					break;
+					
+				case 1:
+					if(cetraObjekti.size()<1) {
+						JOptionPane.showMessageDialog(null, "Nav četrstūra lielumi!","Brīdinājums!",JOptionPane.WARNING_MESSAGE);
+					break;
+					}
+					JOptionPane.showMessageDialog(null, IzveidotieObjekti.izvaditC(cetraObjekti),"Četrstūra lielumi",JOptionPane.PLAIN_MESSAGE);
+					break;
+				
+				
+				case 2:
+					if(aplaaObjekti.size()<1) {
+					JOptionPane.showMessageDialog(null, "Nav apļa lielumi!","Brīdinājums!",JOptionPane.WARNING_MESSAGE);
+					break;
+					}
+					JOptionPane.showMessageDialog(null, IzveidotieObjekti.izvaditA(aplaaObjekti),"Apļa lielumi",JOptionPane.PLAIN_MESSAGE);
+					break;
+				
+			
+				case 3:
+					if(trisObjekti.size()<1) {
+					JOptionPane.showMessageDialog(null, "Nav trijstūra lielumi!","Brīdinājums!",JOptionPane.WARNING_MESSAGE);
+					break;
+				}
+					JOptionPane.showMessageDialog(null, IzveidotieObjekti.izvaditT(trisObjekti),"Trijstūra lielumi",JOptionPane.PLAIN_MESSAGE);
+					break;
+				}
+				
+				break;
+			
+				
+				
 			}		
 		}while(izvele!=0);
 	}

@@ -11,7 +11,9 @@ public class GoatIzveide {
 			return -1;
 		}
 		
-		return Integer.parseInt(JOptionPane.showInputDialog(null, IzveidotieObjekti.izvadit(Centrs.centraObjekti)));
+		int izvele = minkuTante.skaitlaParbaude(IzveidotieObjekti.izvadit(Centrs.centraObjekti),0,Centrs.centraObjekti.size()-1);
+		
+	return (izvele);
 	}
 	
 	static void izveidotObjektu() {
@@ -32,7 +34,12 @@ public class GoatIzveide {
 		case 0:
 			x=minkuTante.skaitlaParbaude("Ievadi centra punkta x koordinātes", -100, 100);
 			y=minkuTante.skaitlaParbaude("Ievadi centra punkta y koordinātes", -100, 100);
+			if((x==-1||y==-1) && minkuTante.ievade==null) {
+				JOptionPane.showMessageDialog(null, "Centra punkts netika izveidots!", "Brīdinājums",JOptionPane.WARNING_MESSAGE);
+			break;
+			}
 			Centrs.centraObjekti.add(new Figuras(x,y));
+			
 			
 			JOptionPane.showMessageDialog(null, "Centra punkts izveidots","Paziņojums",JOptionPane.INFORMATION_MESSAGE);
 			break;
@@ -61,6 +68,9 @@ public class GoatIzveide {
 				}
 				p=minkuTante.skaitlaParbaude("Ievadi četrstūra platumu", 1, 100);
 				a=minkuTante.skaitlaParbaude("Ievadi četrstūra augstumu", 1, 100);
+				if(p==-1||a==-1) {
+					JOptionPane.showMessageDialog(null, "Četrstūris netika izveidots!", "Brīdinājums", JOptionPane.WARNING_MESSAGE);
+				}
 				Centrs.cetraObjekti.add(new Cetrustruris(Centrs.centraObjekti.get(CenPNr), p, a));
 				break;
 			}
